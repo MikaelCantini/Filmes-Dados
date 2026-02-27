@@ -12,3 +12,7 @@ SELECT * FROM Filmes WHERE Ano = 1997
 
 -- 5. Buscar Filmes lançados Após o ano 2000
 SELECT * FROM Filmes WHERE Ano > 2000
+
+-- 6. Buscar os filmes com a duracao maior que 100 e menor que 150, ordenando pela duracao em ordem crescente
+SELECT * FROM Filmes WHERE Duracao > 100 AND Duracao < 150 ORDER BY Duracao
+

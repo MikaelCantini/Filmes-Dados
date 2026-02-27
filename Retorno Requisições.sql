@@ -24,3 +24,8 @@ SELECT * FROM Atores WHERE Genero = 'M'
 
 -- 9. Buscar os Atores do gênero feminino, retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
 SELECT * FROM Atores WHERE Genero = 'F' ORDER BY PrimeiroNome
+
+-- 10. Buscar o nome do filme e o gênero
+SELECT Filmes.Nome,Generos.Genero FROM Filmes 
+INNER JOIN FilmesGenero ON FilmesGenero.IdFilme = Filmes.Id 
+INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id

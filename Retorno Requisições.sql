@@ -35,3 +35,8 @@ SELECT Filmes.Nome,Generos.Genero FROM Filmes
 INNER JOIN FilmesGenero ON FilmesGenero.IdFilme = Filmes.Id
 INNER JOIN Generos ON FilmesGenero.IdGenero = Generos.Id
 Where Generos.Genero = 'Mistério'
+
+-- 12. Buscar o nome do filme e os atores, trazendo o PrimeiroNome, UltimoNome e seu Papel
+SELECT F.Nome, A.PrimeiroNome, A.UltimoNome, E.Papel FROM Filmes F
+INNER JOIN ElencoFilme E ON E.IdFilme = F.Id
+INNER JOIN Atores A ON E.IdAtor = A.Id
